@@ -10,11 +10,11 @@
 | ADR-006 | Use deep charcoal, warm white and restrained gold | Approved | Preserve the premium dark integrated-studio direction. |
 | ADR-007 | Keep the legacy `ADXverse-V1` repository as reference only | Approved | Do not carry forward its architecture or outdated positioning by default. |
 | ADR-008 | Build a reusable design-system layer before page templates | Approved | Ensure consistency and review visual foundations independently. |
-| ADR-009 | Keep the font stack provisional until visual review | Provisional | Avoid locking in a font before checking its appearance and licensing requirements. |
+| ADR-009 | Use an architectural display stack led by Bahnschrift, with Aptos / Segoe UI for supporting text | Provisional | Establish a stronger contemporary voice using locally available system fonts; verify actual rendering on supported devices before final approval. |\n| ADR-010 | Reject the first design-system visual direction and explore bold contemporary + architectural minimalism | In review | The first preview felt generic and its typography lacked the character expected for ADXverse. The replacement uses stronger display hierarchy, asymmetrical composition and a more nuanced graphite / ivory / champagne palette. |
 
 ## Open decisions
 
-- Final font family and licensed font assets.
+- Final font family and licensed font assets; the current system stack is a visual prototype, not a final licensed-font decision.
 - Whether a dedicated motion library is needed; prefer CSS transitions unless requirements justify a dependency.
 - Hosting and deployment provider.
 - Enquiry delivery provider and secure upload implementation.
