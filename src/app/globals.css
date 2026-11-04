@@ -2,28 +2,29 @@
 
 :root {
   color-scheme: dark;
-  --color-background: #101112;
-  --color-surface: #181a1c;
-  --color-surface-raised: #202326;
-  --color-border: #303337;
-  --color-foreground: #f5f5f2;
-  --color-muted: #b9b9b4;
-  --color-subtle: #92938f;
-  --color-accent: #d6aa45;
-  --color-accent-bright: #e8bd62;
-  --font-sans: Arial, Helvetica, sans-serif;
+  --adx-background: #101112;
+  --adx-surface: #181a1c;
+  --adx-surface-raised: #202326;
+  --adx-border: #303337;
+  --adx-foreground: #f5f5f2;
+  --adx-muted: #b9b9b4;
+  --adx-subtle: #92938f;
+  --adx-accent: #d6aa45;
+  --adx-accent-bright: #e8bd62;
+  --adx-font-sans: Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--color-background);
-  --color-surface: var(--color-surface);
-  --color-surface-raised: var(--color-surface-raised);
-  --color-border: var(--color-border);
-  --color-foreground: var(--color-foreground);
-  --color-muted: var(--color-muted);
-  --color-subtle: var(--color-subtle);
-  --color-accent: var(--color-accent);
-  --font-sans: var(--font-sans);
+  --color-background: var(--adx-background);
+  --color-surface: var(--adx-surface);
+  --color-surface-raised: var(--adx-surface-raised);
+  --color-border: var(--adx-border);
+  --color-foreground: var(--adx-foreground);
+  --color-muted: var(--adx-muted);
+  --color-subtle: var(--adx-subtle);
+  --color-accent: var(--adx-accent);
+  --color-accent-bright: var(--adx-accent-bright);
+  --font-sans: var(--adx-font-sans);
 }
 
 * {
@@ -32,15 +33,15 @@
 
 html {
   min-height: 100%;
-  background: var(--color-background);
+  background: var(--adx-background);
 }
 
 body {
   min-height: 100vh;
   margin: 0;
-  background: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-sans);
+  background: var(--adx-background);
+  color: var(--adx-foreground);
+  font-family: var(--adx-font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -56,8 +57,8 @@ a {
 }
 
 ::selection {
-  color: var(--color-background);
-  background: var(--color-accent);
+  color: var(--adx-background);
+  background: var(--adx-accent);
 }
 
 .foundation-screen {
@@ -82,13 +83,13 @@ a {
 }
 
 .wordmark__accent {
-  color: var(--color-accent);
+  color: var(--adx-accent);
   font-weight: 400;
 }
 
 .foundation-screen__status,
 .foundation-screen__footer {
-  color: var(--color-subtle);
+  color: var(--adx-subtle);
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -102,7 +103,7 @@ a {
 
 .eyebrow {
   margin: 0 0 2rem;
-  color: var(--color-accent);
+  color: var(--adx-accent);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.2em;
@@ -119,13 +120,13 @@ a {
 
 .foundation-screen h1 span {
   display: block;
-  color: var(--color-muted);
+  color: var(--adx-muted);
 }
 
 .foundation-screen__intro {
   max-width: 37rem;
   margin: 2.5rem 0 0;
-  color: var(--color-muted);
+  color: var(--adx-muted);
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   line-height: 1.75;
 }
@@ -134,12 +135,12 @@ a {
   width: min(100%, 38rem);
   height: 1px;
   margin: 3.5rem 0 1.25rem;
-  background: var(--color-border);
+  background: var(--adx-border);
 }
 
 .foundation-screen__note {
   margin: 0;
-  color: var(--color-subtle);
+  color: var(--adx-subtle);
   font-size: 0.85rem;
   line-height: 1.6;
 }
