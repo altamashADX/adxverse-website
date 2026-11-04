@@ -2,7 +2,9 @@ export default function HomePage() {
   return (
     <main className="foundation-screen">
       <div className="foundation-screen__topline">
-        <span className="wordmark">ADX<span className="wordmark__accent">verse</span></span>
+        <span className="wordmark">
+          ADX<span className="wordmark__accent">verse</span>
+        </span>
         <span className="foundation-screen__status">A new digital experience</span>
       </div>
 
