@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
@@ -30,9 +31,9 @@ export default function DesignSystemPage() {
       <header className="design-preview__header">
         <Container>
           <nav aria-label="Design system navigation" className="design-preview__nav">
-            <a aria-label="ADXverse design system" className="wordmark" href="/">
+            <Link aria-label="ADXverse design system" className="wordmark" href="/">
               ADX<span className="wordmark__accent">verse</span>
-            </a>
+            </Link>
             <span className="design-preview__nav-note">Design system / v0.1</span>
           </nav>
         </Container>
