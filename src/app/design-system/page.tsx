@@ -62,6 +62,7 @@ export default function DesignSystemPage() {
 
         <section aria-labelledby="color-heading" className="design-preview__section">
           <SectionHeading
+            id="color-heading"
             eyebrow="01 / Colour"
             title="Dark, warm and deliberate."
             description="Charcoal establishes depth. Warm whites carry the message. Gold is an accent for emphasis and action, never decoration."
@@ -87,6 +88,7 @@ export default function DesignSystemPage() {
 
         <section aria-labelledby="type-heading" className="design-preview__section">
           <SectionHeading
+            id="type-heading"
             eyebrow="02 / Typography"
             title="Editorial hierarchy."
             description="A restrained type scale with tight display leading, readable body copy and small uppercase labels for navigation and metadata."
@@ -135,6 +137,7 @@ export default function DesignSystemPage() {
 
         <section aria-labelledby="spacing-heading" className="design-preview__section">
           <SectionHeading
+            id="spacing-heading"
             eyebrow="03 / Spacing"
             title="Space is part of the identity."
             description="A flexible spacing rhythm creates calm, gives content room and keeps layouts from feeling crowded."
@@ -154,6 +157,7 @@ export default function DesignSystemPage() {
 
         <section aria-labelledby="components-heading" className="design-preview__section">
           <SectionHeading
+            id="components-heading"
             eyebrow="04 / Components"
             title="Clear actions. No noise."
             description="Buttons use strong labels, deliberate contrast and consistent sizing. Secondary actions stay visibly secondary."
@@ -186,6 +190,7 @@ export default function DesignSystemPage() {
 
         <section aria-labelledby="surface-heading" className="design-preview__section">
           <SectionHeading
+            id="surface-heading"
             eyebrow="05 / Surfaces"
             title="Depth without effects."
             description="Subtle changes in surface tone and fine borders establish structure. No glow, heavy shadow or unnecessary gradients."
@@ -208,6 +213,7 @@ export default function DesignSystemPage() {
 
         <section aria-labelledby="principles-heading" className="design-preview__section">
           <SectionHeading
+            id="principles-heading"
             eyebrow="06 / Principles"
             title="The rules behind the details."
           />
