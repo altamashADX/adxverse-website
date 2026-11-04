@@ -34,9 +34,9 @@ Next.js reported an advisory that it detected an empty parent-level lockfile at 
 
 ## Milestone 1 — Design System
 
-**Status:** Initial implementation committed; local review and validation pending.
+**Status:** First visual direction rejected after review; revised exploration 02 committed for local review.
 
-### Initial implementation
+### Exploration 01 — rejected\n\n- The initial preview was reviewed by the user and not approved.\n- Feedback: typography felt generic and the overall direction lacked a distinctive identity.\n- No page templates or global navigation will be built on this rejected visual direction.\n\n### Exploration 02 — architectural contemporary\n\n- Reworked the palette around graphite, carbon, iron, warm ivory and restrained champagne.\n- Replaced the Helvetica-led typography with a stronger local system-font stack led by Bahnschrift for display and Aptos / Segoe UI for supporting text.\n- Rebuilt the preview around larger typographic statements, asymmetrical composition, a twelve-column grid and more deliberate surface contrast.\n- Kept the typography stack provisional until it is inspected on the user's Windows environment and other target devices.\n\n### Previous implementation details (superseded)
 
 - Expanded the global token layer for colour, typography, container width, spacing, radii and motion.
 - Added shared UI primitives: `Container`, `Button` and `SectionHeading`.
@@ -54,4 +54,4 @@ Next.js reported an advisory that it detected an empty parent-level lockfile at 
 
 ### Next
 
-Complete the design-system review and approval before building the global navigation or full homepage.
+Review exploration 02 at desktop and mobile widths. Confirm the display font rendering, hierarchy, composition and colour balance before approving the design system. Do not proceed to global navigation or the full homepage until approval.
