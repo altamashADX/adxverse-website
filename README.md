@@ -13,13 +13,37 @@ This is a fresh implementation based on the approved ADXverse Master Website Dev
 - Accurate representation of in-house capabilities and specialist-partner delivery.
 - No fabricated projects, clients, testimonials, credentials, statistics or contact details.
 
-## Technology direction
+## Technology
 
 - Next.js App Router
 - React
 - TypeScript
-- Tailwind CSS
+- Tailwind CSS v4
+- ESLint and Prettier
 - Structured TypeScript content initially; CMS evaluation is deferred.
+
+## Local development
+
+**Requirements:** Node.js 20.9 or later and npm.
+
+```bash
+git clone https://github.com/altamashADX/adxverse-website.git
+cd adxverse-website
+npm install
+cp .env.example .env.local
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+Before submitting changes, run:
+
+```bash
+npm run lint
+npm run typecheck
+npm run build
+npm run format:check
+```
 
 ## Project documentation
 
@@ -32,4 +56,4 @@ This is a fresh implementation based on the approved ADXverse Master Website Dev
 **Repository:** `altamashADX/adxverse-website`  
 **Default branch:** `main`
 
-Setup and validation commands will be recorded after the local environment has been verified.
+The current home screen is a temporary foundation placeholder, not the final approved homepage.
