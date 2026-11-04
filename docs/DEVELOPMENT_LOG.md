@@ -2,7 +2,7 @@
 
 ## Milestone 0 — Project Foundation
 
-**Status:** Initial foundation committed; local installation and validation pending.
+**Status:** Complete — locally validated and synchronized with GitHub.
 
 ### Established
 
@@ -15,20 +15,43 @@
 - Environment variable example and baseline ignore/editor configuration.
 - Temporary foundation landing screen; this is not the approved final homepage.
 
-### Not yet verified
+### Local validation reported
 
-The GitHub integration can commit source files but cannot install npm packages or execute the project. The following must be run in a local development environment:
+The developer ran the following commands successfully on Windows PowerShell:
 
-- `npm install`
 - `npm run lint`
 - `npm run typecheck`
 - `npm run build`
+- `npm run format:check`
 
-Record the actual output before marking the milestone validated.
+The production build generated the home route and Next.js not-found route as static output. The local Git working tree was clean after commit `037efd6` was pushed to `main`.
+
+### Environment note
+
+Next.js reported an advisory that it detected an empty parent-level lockfile at `C:\Users\altam\package-lock.json`. The project lockfile at the repository root is tracked. The parent lockfile was left untouched. This warning did not prevent the production build.
+
+---
+
+## Milestone 1 — Design System
+
+**Status:** Initial implementation committed; local review and validation pending.
+
+### Initial implementation
+
+- Expanded the global token layer for colour, typography, container width, spacing, radii and motion.
+- Added shared UI primitives: `Container`, `Button` and `SectionHeading`.
+- Added a dedicated design-system preview at `/design-system`.
+- Added preview sections for colour, type hierarchy, spacing, buttons, surfaces and design principles.
+- Added visible keyboard focus treatment and reduced-motion handling.
+- Kept the font family provisional pending visual review and final font selection.
+
+### Review requirements
+
+- Review the preview at desktop and mobile widths.
+- Confirm colour, contrast, typography direction and spacing.
+- Run lint, typecheck, production build and formatting checks locally.
+- Record any changes before treating the system as approved.
 
 ### Next
 
-1. Clone the repository and install dependencies locally.
-2. Run the validation commands above.
-3. Resolve any installation, lint, type or build issues.
-4. Review and approve the foundation before starting Milestone 1 — Design System.
+Complete the design-system review and approval before building the global navigation or full homepage.
