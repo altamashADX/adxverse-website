@@ -1,28 +1,13 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
-import { SectionHeading } from '@/components/ui/section-heading';
 
-const colors = [
-  { name: 'Ink', token: '--adx-ink', hex: '#0A0B0C' },
-  { name: 'Background', token: '--adx-background', hex: '#101112' },
-  { name: 'Surface', token: '--adx-surface', hex: '#181A1C' },
-  { name: 'Warm white', token: '--adx-foreground', hex: '#F5F5F2' },
-  { name: 'Muted', token: '--adx-muted', hex: '#B9B9B4' },
-  { name: 'Subtle', token: '--adx-subtle', hex: '#92938F' },
-  { name: 'Gold', token: '--adx-accent', hex: '#D6AA45' },
-  { name: 'Gold light', token: '--adx-accent-bright', hex: '#E8BD62' },
-  { name: 'Border', token: '--adx-border', hex: '#303337' },
-  { name: 'Raised', token: '--adx-surface-raised', hex: '#202326' },
-];
-
-const spacing = [
-  { name: 'XS', value: '8px', width: '8px' },
-  { name: 'SM', value: '16px', width: '16px' },
-  { name: 'MD', value: '24px', width: '24px' },
-  { name: 'LG', value: '40px', width: '40px' },
-  { name: 'XL', value: '64px', width: '64px' },
-  { name: '2XL', value: '96px', width: '96px' },
+const palette = [
+  { name: 'Graphite', hex: '#171A1B', color: '#171A1B', ink: '#F0EEE8' },
+  { name: 'Carbon', hex: '#101213', color: '#101213', ink: '#F0EEE8' },
+  { name: 'Iron', hex: '#252A2B', color: '#252A2B', ink: '#F0EEE8' },
+  { name: 'Ivory', hex: '#F0EEE8', color: '#F0EEE8', ink: '#171A1B' },
+  { name: 'Champagne', hex: '#C3A36A', color: '#C3A36A', ink: '#171A1B' },
 ];
 
 export default function DesignSystemPage() {
@@ -31,212 +16,173 @@ export default function DesignSystemPage() {
       <header className="design-preview__header">
         <Container>
           <nav aria-label="Design system navigation" className="design-preview__nav">
-            <Link aria-label="ADXverse design system" className="wordmark" href="/">
+            <Link aria-label="ADXverse home" className="wordmark" href="/">
               ADX<span className="wordmark__accent">verse</span>
             </Link>
-            <span className="design-preview__nav-note">Design system / v0.1</span>
+            <span className="design-preview__nav-note">Visual language / exploration 02</span>
           </nav>
         </Container>
       </header>
 
       <Container>
         <section className="design-preview__hero">
-          <p className="adx-eyebrow">ADXVERSE / FOUNDATIONS</p>
-          <div className="design-preview__hero-copy">
-            <h1 className="adx-display">
-              A considered system.
-              <br />
-              <span>One connected experience.</span>
+          <div className="design-preview__hero-main">
+            <div className="design-preview__hero-index">
+              <p className="adx-eyebrow">ADXVERSE / DESIGN FOUNDATIONS</p>
+            </div>
+            <h1 className="adx-display design-preview__hero-title">
+              Made to bring
+              <span>things together.</span>
             </h1>
-            <p className="adx-body-lg mt-8 max-w-2xl">
-              The visual foundations for an integrated design, technology, spaces and
-              project delivery platform. Quiet confidence, clear hierarchy and room to
-              breathe.
-            </p>
+            <div className="design-preview__hero-actions">
+              <Button size="large">Explore the system <span aria-hidden="true">↘</span></Button>
+              <Button size="large" variant="secondary">Visual direction 02</Button>
+            </div>
           </div>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Button>Primary action <span aria-hidden="true">↗</span></Button>
-            <Button variant="secondary">Secondary action</Button>
-            <Button variant="quiet">Quiet action <span aria-hidden="true">→</span></Button>
+          <div className="design-preview__hero-side">
+            <span className="design-preview__meta">01 / The point of view</span>
+            <p className="adx-body-lg">
+              One connected practice across design, technology, spaces, engineering and
+              delivery. Different disciplines. One considered outcome.
+            </p>
+            <p className="adx-caption">
+              Architectural in its structure. Contemporary in its expression. Clear in
+              every interaction.
+            </p>
           </div>
         </section>
 
-        <section aria-labelledby="color-heading" className="design-preview__section">
-          <SectionHeading
-            id="color-heading"
-            eyebrow="01 / Colour"
-            title="Dark, warm and deliberate."
-            description="Charcoal establishes depth. Warm whites carry the message. Gold is an accent for emphasis and action, never decoration."
-            aside={<span className="design-preview__section-number">10 CORE TOKENS</span>}
-          />
-          <div className="design-preview__swatches">
-            {colors.map((color) => (
-              <div className="design-preview__swatch" key={color.token}>
-                <div
-                  aria-label={`${color.name} colour swatch`}
-                  className="design-preview__swatch-color"
-                  style={{ backgroundColor: `var(${color.token})` }}
-                />
-                <div className="design-preview__swatch-info">
-                  <span className="text-sm font-medium">{color.name}</span>
-                  <span className="adx-caption">{color.hex}</span>
-                  <span className="adx-caption">{color.token}</span>
-                </div>
+        <section aria-labelledby="palette-heading" className="design-preview__section">
+          <div className="design-preview__section-head">
+            <div>
+              <p className="adx-eyebrow mb-5">02 / Material and tone</p>
+              <h2 className="adx-heading-xl" id="palette-heading">A darker kind of warmth.</h2>
+              <p className="adx-body-lg mt-6 max-w-2xl">
+                Graphite gives the system depth. Ivory carries the message. Champagne
+                appears only where the eye needs a point of focus.
+              </p>
+            </div>
+            <p className="design-preview__section-number">CORE PALETTE / 05 COLOURS</p>
+          </div>
+          <div className="design-preview__palette">
+            {palette.map((item) => (
+              <div className="design-preview__swatch" key={item.name} style={{ background: item.color, color: item.ink }}>
+                <span className="design-preview__swatch-name">{item.name}</span>
+                <span className="design-preview__swatch-hex">{item.hex}</span>
               </div>
             ))}
           </div>
         </section>
 
         <section aria-labelledby="type-heading" className="design-preview__section">
-          <SectionHeading
-            id="type-heading"
-            eyebrow="02 / Typography"
-            title="Editorial hierarchy."
-            description="A restrained type scale with tight display leading, readable body copy and small uppercase labels for navigation and metadata."
-          />
-          <div className="design-preview__type-grid">
+          <div className="design-preview__section-head">
             <div>
-              <div className="design-preview__type-sample">
-                <p className="adx-caption mb-4">DISPLAY / CLAMPED</p>
-                <p className="adx-display">Make room for possibility.</p>
+              <p className="adx-eyebrow mb-5">03 / Typography</p>
+              <h2 className="adx-heading-xl" id="type-heading">A stronger voice.</h2>
+              <p className="adx-body-lg mt-6 max-w-2xl">
+                Display typography is structural and assured. Supporting text stays
+                open, readable and direct.
+              </p>
+            </div>
+            <p className="design-preview__section-number">DISPLAY / BAHNSCHRIFT STACK</p>
+          </div>
+
+          <div className="design-preview__type-layout">
+            <div>
+              <div className="design-preview__type-feature">
+                <p className="adx-caption mb-5">DISPLAY / 01 — STATEMENT</p>
+                <p className="design-preview__type-display">Think in<br />whole systems.</p>
               </div>
-              <div className="design-preview__type-sample">
-                <p className="adx-caption mb-4">HEADING / XL</p>
-                <p className="adx-heading-xl">From intent to outcome.</p>
-              </div>
-              <div className="design-preview__type-sample">
-                <p className="adx-caption mb-4">HEADING / LG</p>
-                <p className="adx-heading-lg">One partner. Connected capabilities.</p>
+              <div className="design-preview__type-feature">
+                <p className="adx-caption mb-5">HEADING / 02 — SECTION</p>
+                <p className="design-preview__type-heading">Designed with intent.<br />Built to work.</p>
               </div>
             </div>
-            <div className="space-y-8">
+            <div className="design-preview__type-aside">
               <div>
-                <p className="adx-caption mb-3">BODY / LARGE</p>
-                <p className="adx-body-lg">
-                  We bring disciplines together to shape thoughtful outcomes — from a
-                  focused requirement to a complete project.
+                <span className="adx-caption">BODY / LARGE</span>
+                <p className="design-preview__type-body">
+                  We connect creative thinking with technical understanding and
+                  practical delivery — from one focused requirement to a complete
+                  project.
                 </p>
               </div>
               <div>
-                <p className="adx-caption mb-3">BODY / DEFAULT</p>
+                <span className="adx-caption">BODY / DEFAULT</span>
                 <p className="adx-body">
-                  Clear information, considered details and a consistent rhythm make
-                  complex services easier to understand.
+                  Clear language. Comfortable reading size. A rhythm that gives complex
+                  ideas room to make sense.
                 </p>
               </div>
               <div>
-                <p className="adx-caption mb-3">EYEBROW / LABEL</p>
-                <p className="adx-eyebrow">Design · Technology · Build</p>
-              </div>
-              <div>
-                <p className="adx-caption mb-3">CAPTION / METADATA</p>
-                <p className="adx-caption">A considered detail. Never competing with the content.</p>
+                <span className="adx-caption">LABEL / METADATA</span>
+                <p className="adx-eyebrow">Design / Technology / Build</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section aria-labelledby="spacing-heading" className="design-preview__section">
-          <SectionHeading
-            id="spacing-heading"
-            eyebrow="03 / Spacing"
-            title="Space is part of the identity."
-            description="A flexible spacing rhythm creates calm, gives content room and keeps layouts from feeling crowded."
-          />
-          <div className="design-preview__spacing max-w-2xl">
-            {spacing.map((item) => (
-              <div className="design-preview__spacing-row" key={item.name}>
-                <span className="adx-caption">{item.name}</span>
-                <div className="h-2 rounded-full bg-[var(--adx-surface-raised)]">
-                  <div className="design-preview__spacing-bar" style={{ width: item.width }} />
-                </div>
-                <span className="adx-caption text-right">{item.value}</span>
-              </div>
-            ))}
+        <section aria-labelledby="composition-heading" className="design-preview__section">
+          <div className="design-preview__section-head">
+            <div>
+              <p className="adx-eyebrow mb-5">04 / Composition</p>
+              <h2 className="adx-heading-xl" id="composition-heading">Order, with room to move.</h2>
+              <p className="adx-body-lg mt-6 max-w-2xl">
+                A twelve-column foundation supports asymmetry, alignment and editorial
+                pacing without forcing every section into the same template.
+              </p>
+            </div>
+            <p className="design-preview__section-number">12-COLUMN / RESPONSIVE GRID</p>
+          </div>
+          <div aria-label="Example of an asymmetrical twelve-column layout grid" className="design-preview__grid-demo">
+            {Array.from({ length: 6 }, (_, index) => <div aria-hidden="true" className="design-preview__grid-cell" key={index} />)}
           </div>
         </section>
 
-        <section aria-labelledby="components-heading" className="design-preview__section">
-          <SectionHeading
-            id="components-heading"
-            eyebrow="04 / Components"
-            title="Clear actions. No noise."
-            description="Buttons use strong labels, deliberate contrast and consistent sizing. Secondary actions stay visibly secondary."
-          />
-          <div className="space-y-8">
-            <div className="space-y-3">
-              <p className="adx-caption">BUTTON VARIANTS</p>
-              <div className="design-preview__button-row">
-                <Button>Start a project <span aria-hidden="true">↗</span></Button>
-                <Button variant="secondary">Explore services</Button>
-                <Button variant="quiet">View our work <span aria-hidden="true">→</span></Button>
-              </div>
+        <section aria-labelledby="interaction-heading" className="design-preview__section">
+          <div className="design-preview__section-head">
+            <div>
+              <p className="adx-eyebrow mb-5">05 / Interaction</p>
+              <h2 className="adx-heading-xl" id="interaction-heading">Quietly decisive.</h2>
+              <p className="adx-body-lg mt-6 max-w-2xl">
+                Controls are direct, tactile and legible. The accent colour is reserved
+                for the action that matters most.
+              </p>
             </div>
-            <div className="space-y-3">
-              <p className="adx-caption">BUTTON SIZES</p>
-              <div className="design-preview__button-row">
-                <Button size="small">Compact</Button>
-                <Button>Default</Button>
-                <Button size="large">Large action</Button>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <p className="adx-caption">DISABLED STATE</p>
-              <div className="design-preview__button-row">
-                <Button disabled>Unavailable action</Button>
-              </div>
-            </div>
+            <p className="design-preview__section-number">BUTTONS / STATES / SURFACES</p>
           </div>
-        </section>
-
-        <section aria-labelledby="surface-heading" className="design-preview__section">
-          <SectionHeading
-            id="surface-heading"
-            eyebrow="05 / Surfaces"
-            title="Depth without effects."
-            description="Subtle changes in surface tone and fine borders establish structure. No glow, heavy shadow or unnecessary gradients."
-          />
-          <div className="design-preview__surface-grid">
-            <div className="design-preview__surface" style={{ background: 'var(--adx-background)' }}>
-              <span className="adx-caption">LEVEL 01 / BASE</span>
-              <span className="text-sm">Background</span>
-            </div>
-            <div className="design-preview__surface" style={{ background: 'var(--adx-surface)' }}>
-              <span className="adx-caption">LEVEL 02 / SURFACE</span>
-              <span className="text-sm">Raised content</span>
-            </div>
-            <div className="design-preview__surface" style={{ background: 'var(--adx-surface-raised)' }}>
-              <span className="adx-caption">LEVEL 03 / RAISED</span>
-              <span className="text-sm">Focused emphasis</span>
-            </div>
-          </div>
-        </section>
-
-        <section aria-labelledby="principles-heading" className="design-preview__section">
-          <SectionHeading
-            id="principles-heading"
-            eyebrow="06 / Principles"
-            title="The rules behind the details."
-          />
-          <div className="grid gap-6 md:grid-cols-2">
-            {[
-              ['01', 'Whitespace is intentional', 'Use generous section spacing and avoid packing unrelated content together.'],
-              ['02', 'Gold is an accent', 'Reserve gold for actions, active states and small moments of emphasis.'],
-              ['03', 'Hierarchy before decoration', 'Use scale, alignment and contrast to guide attention instead of effects.'],
-              ['04', 'Motion respects the user', 'Keep transitions purposeful and honour reduced-motion preferences.'],
-            ].map(([number, title, description]) => (
-              <div className="border-t border-[var(--adx-border)] pt-5" key={number}>
-                <p className="adx-caption mb-4">{number}</p>
-                <h3 className="text-lg font-medium tracking-tight">{title}</h3>
-                <p className="adx-body mt-2 max-w-lg">{description}</p>
+          <div className="space-y-10">
+            <div>
+              <p className="adx-caption mb-4">PRIMARY AND SECONDARY ACTIONS</p>
+              <div className="design-preview__component-row">
+                <Button size="large">Start a project <span aria-hidden="true">↗</span></Button>
+                <Button size="large" variant="secondary">Explore capabilities</Button>
+                <Button size="large" variant="quiet">View our approach <span aria-hidden="true">→</span></Button>
               </div>
-            ))}
+            </div>
+            <div className="design-preview__component-row">
+              <div className="design-preview__component-block">
+                <span className="adx-caption">SURFACE / 01</span>
+                <span className="text-base font-semibold">Graphite field</span>
+                <span className="adx-caption">#171A1B · PRIMARY CANVAS</span>
+              </div>
+              <div className="design-preview__component-block" style={{ background: 'var(--adx-surface-raised)' }}>
+                <span className="adx-caption">SURFACE / 02</span>
+                <span className="text-base font-semibold">Raised layer</span>
+                <span className="adx-caption">#252A2B · FOCUSED CONTENT</span>
+              </div>
+              <div className="design-preview__component-block" style={{ background: 'var(--adx-paper)', color: 'var(--adx-ink)' }}>
+                <span className="text-xs font-semibold tracking-widest">SURFACE / 03</span>
+                <span className="text-base font-semibold">Warm paper</span>
+                <span className="text-xs">#E4E1D8 · CONTRAST MOMENT</span>
+              </div>
+            </div>
           </div>
         </section>
 
         <footer className="design-preview__footer">
           <span className="wordmark">ADX<span className="wordmark__accent">verse</span></span>
-          <span className="adx-caption">FOUNDATIONS / DESIGN SYSTEM V0.1 / REVIEW BUILD</span>
+          <span className="adx-caption">FORM & FUNCTION / EXPLORATION 02 / NOT YET APPROVED</span>
         </footer>
       </Container>
     </main>
